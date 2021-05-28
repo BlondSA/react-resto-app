@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./components/app";
 import { Provider } from "react-redux";
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import ErrorBoundary from "./components/error-boundary";
 import RestoServiceContext from "./components/resto-service-context";
 import RestoService from "./services/resto-service";
@@ -16,9 +16,9 @@ ReactDOM.render(
     <Provider store={store}>
         <ErrorBoundary>
             <RestoServiceContext.Provider value={restoService}>
-                <Router>
+                <BrowserRouter>
                     <App />
-                </Router>
+                </BrowserRouter>
             </RestoServiceContext.Provider>
         </ErrorBoundary>
     </Provider>,
