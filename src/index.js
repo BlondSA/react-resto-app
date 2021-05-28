@@ -13,14 +13,14 @@ import "./index.scss";
 const restoService = new RestoService();
 
 ReactDOM.render(
-  <Provider store={store}>
-    <ErrorBoundary>
-      <RestoServiceContext.Provider value={restoService}>
-        <Router>
-          <App />
-        </Router>
-      </RestoServiceContext.Provider>
-    </ErrorBoundary>
-  </Provider>,
-  document.getElementById("root")
+    <Provider store={store}>
+        <ErrorBoundary>
+            <RestoServiceContext.Provider value={restoService}>
+                <Router>
+                    <App />
+                </Router>
+            </RestoServiceContext.Provider>
+        </ErrorBoundary>
+    </Provider>,
+    document.getElementById("root")
 );

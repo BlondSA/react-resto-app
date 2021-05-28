@@ -2,16 +2,16 @@ import React, { Component } from "react";
 import Error from "../error";
 
 export default class ErrorBoundary extends Component {
-  state = { error: false };
+    state = { error: false };
 
-  componentDidCatch() {
-    this.setState({ error: true });
-  }
-
-  render() {
-    if (this.state.error) {
-      return <Error />;
+    componentDidCatch() {
+        this.setState({ error: true });
     }
-    return this.props.children;
-  }
+
+    render() {
+        if (this.state.error) {
+            return <Error />;
+        }
+        return this.props.children;
+    }
 }
