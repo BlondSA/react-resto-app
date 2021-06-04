@@ -13,7 +13,7 @@ const App = () => {
             }}
             className="app"
         >
-            <AppHeader total={50} />
+            <AppHeader />
             <Switch>
                 <Route path="/" exact component={MainPage} />
                 <Route path="/cart" component={CartPage} />
